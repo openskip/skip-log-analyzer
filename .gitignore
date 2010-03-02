@@ -1,0 +1,12 @@
+config/database.yml
+db/schema.rb
+log/*.log*
+coverage
+tmp/*
+temp/*
+pkg/*
+*flymake.rb
+*#*#
+*.#*
+webrat-*.html
+rerun.txt
