@@ -38,4 +38,8 @@ Rails::Initializer.run do |config|
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
+
+  config.gem "fastercsv", :version => '1.5.1'
+  config.gem "json", :lib => "json/add/rails", :version => '1.2.0'
+  config.gem "searchlogic", :version => '2.4.7'
 end
