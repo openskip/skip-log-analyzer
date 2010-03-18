@@ -1,6 +1,8 @@
 ================================================================================
 SKIP Log Analyzer
 ================================================================================
+gem install sqlite3-ruby -v1.2.5
+※ sqlite3のgemが入っているとerrorとなる
 
 解析データ作成
 ------------------------------------------------------------
@@ -11,7 +13,7 @@ request-log-analyzer -f ./lib/skip_format.rb -d ./db/#{RAILS_ENV}.sqlite3 #{skip
 ------------------------------------------------------------
 1.ログインユーザのアクセスをアクセス日とアクセスURLでグルーピングしたアクセス数の統計を取得
   ex) 全てのデータをCSVで取得
-    ./script/runner "puts Request.frequencies(:format => 'csv')"
+    RAILS_ENV=#{RAILS_ENV} ./script/runner "puts Request.frequencies(:format => 'csv')"
   ex) 2009-03-01のデータをCSVで取得
     ./script/runner "puts Request.frequencies(:format => 'csv', :timestamp => 20090301000000..20090302000000)"
   ex) 2009-03-01のマイページのデータをCSVで取得
