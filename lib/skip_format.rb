@@ -12,7 +12,7 @@ class SkipFormat < RequestLogAnalyzer::FileFormat::Rails
   end
 
   line_definition :current_user do |line|
-    line.regexp = /\[Log for inspection\]: \{\"user_id\" => \"(\d)\", \"uid\" => \"(.+)\"\}/
+    line.regexp = /\[Log for inspection\]: \{\"user_id\" => \"(\d+)\", \"uid\" => \"(.+)\"\}/
     line.captures << { :name => :user_id, :type => :string }
     line.captures << { :name => :uid, :type => :string }
   end
